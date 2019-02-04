@@ -9,15 +9,16 @@
 }
 .copyright {
     min-height: 10vh;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
-        width: 30px;
-    }
     @media screen and (max-width: 900px) {
         min-height: auto;
     }
+}
+.copyright img {
+    width: 30px;
 }
 
 .bullet {
@@ -53,4 +54,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+a {
+    background: linear-gradient(to right, #F6B400 0%, #FD3E22 100%);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration-line: overline;
+    border-bottom: solid 2px #F6B400;
+    &:hover {
+        border-bottom: solid 2px #FD3E22;
+    }
+    
 }
