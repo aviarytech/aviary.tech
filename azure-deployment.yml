@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: aviary-tech
+spec:
+  selector:
+    matchLabels:
+      app: aviary-tech
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: aviary-tech
+    spec:
+      containers:
+      - name: aviary-tech
+        image: aviary.azurecr.io/aviary.tech:latest
+        ports:
+        - containerPort: 80
