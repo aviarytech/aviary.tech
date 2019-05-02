@@ -1,4 +1,4 @@
-# Starter pipeline
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -10,6 +10,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: docker build -t aviary.tech .
-  displayName: 'Build docker image'
-
+- task: Docker@2
+  inputs:
+    containerRegistry: 'aviary container registry'
+    repository: 'aviary.tech'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
