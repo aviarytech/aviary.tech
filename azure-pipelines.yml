@@ -22,6 +22,5 @@ steps:
     script: 'sed -i -e ''s/__BUILD_ID__/$(Build.BuildId)/g'' azure-deployment.yml'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'azure-deployment.yml'
     ArtifactName: 'azure-deployment.yml'
-    publishLocation: 'Container'
