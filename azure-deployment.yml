@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: aviary-tech
-        image: aviary.azurecr.io/aviary.tech:latest
+        image: aviary.azurecr.io/aviary.tech:__BUILD_ID__
         ports:
         - containerPort: 80
