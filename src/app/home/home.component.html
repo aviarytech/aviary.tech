@@ -1,0 +1,23 @@
+<div class="app-component-container">
+  <div class="column speech-col">
+    <h1>We build great technology.</h1>
+    <h2>Expertise in the entire software delivery lifecycle, bringing ideas to life.</h2>
+    <h2>Our services include:</h2>
+    <h3 *ngFor="let service of services" class="bullet">{{ service }}</h3>
+    <h2>
+      Let’s build great software together. <a href="mailto:hello@aviary.tech">Get in touch!</a>
+    </h2>
+  </div>
+  <div class="column logo-col">
+    <div class="logo-wrapper">
+      <div class="logo">
+        <img src="../assets/img/logo.png" />
+      </div>
+    </div>
+    <img src="../assets/img/feather.png" />
+  </div>
+</div>
+<div class="copyright">
+  © Aviary Technologies Inc.
+  <img src="../assets/img/parrot.png" />
+</div>
